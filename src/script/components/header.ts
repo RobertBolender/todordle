@@ -11,11 +11,12 @@ export class AppHeader extends LitElement {
     return css`
       header {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        place-content: center;
         background: var(--app-color-primary);
         color: white;
         height: 4em;
+        border-bottom: 1px solid #3a3a3c;
+        margin-bottom: 2em;
       }
 
       header h1 {
@@ -31,7 +32,7 @@ export class AppHeader extends LitElement {
 
       #back-button-block {
         display: flex;
-        justify-content: space-between;
+        place-content: center;
         align-items: center;
         width: 11em;
       }
