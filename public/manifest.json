@@ -5,10 +5,10 @@
   "display": "standalone",
   "start_url": "/",
   "short_name": "todordle",
-  "theme_color": "#02bb03",
+  "theme_color": "#f9cb06",
   "description": "Todordle is a simple habit-forming todo app",
   "orientation": "any",
-  "background_color": "#02bb03",
+  "background_color": "#f9cb06",
   "related_applications": [],
   "prefer_related_applications": false,
   "icons": [
