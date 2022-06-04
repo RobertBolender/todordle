@@ -87,17 +87,6 @@ export class AppHome extends LitElement {
   async firstUpdated() {
     // this method is a lifecycle even in lit
     // for more info check out the lit docs https://lit.dev/docs/components/lifecycle/
-    console.log('This is your home page');
-  }
-
-  share() {
-    if ((navigator as any).share) {
-      (navigator as any).share({
-        title: 'PWABuilder pwa-starter',
-        text: 'Check out the PWABuilder pwa-starter!',
-        url: 'https://github.com/pwa-builder/pwa-starter',
-      });
-    }
   }
 
   render() {
@@ -108,74 +97,10 @@ export class AppHome extends LitElement {
           <fluent-card id="welcomeCard">
             <h2>${this.message}</h2>
 
-            <p>
-              For more information on the PWABuilder pwa-starter, check out the
-              <fluent-anchor
-                href="https://github.com/pwa-builder/pwa-starter/wiki/Getting-Started"
-                appearance="hypertext"
-                >Documentation on Github</fluent-anchor
-              >.
-            </p>
-
             <p id="mainInfo">
-              Welcome to the
-              <fluent-anchor href="https://pwabuilder.com" appearance="hypertext"
-                >PWABuilder</fluent-anchor
-              >
-              pwa-starter! Be sure to head back to
-              <fluent-anchor href="https://pwabuilder.com" appearance="hypertext"
-                >PWABuilder</fluent-anchor
-              >
-              when you are ready to ship this PWA to the Microsoft Store, Google Play
-              and the Apple App Store!
+              Coming soon!
             </p>
-
-            ${'share' in navigator
-              ? html`<fluent-button appearance="primary" @click="${this.share}"
-                  >Share this Starter!</fluent-button
-                >`
-              : null}
           </fluent-card>
-
-          <fluent-card id="infoCard">
-            <h2>Technology Used</h2>
-
-            <ul>
-              <li>
-                <fluent-anchor
-                  href="https://www.typescriptlang.org/"
-                  appearance="hypertext"
-                  >TypeScript</fluent-anchor
-                >
-              </li>
-
-              <li>
-                <fluent-anchor
-                  href="https://lit.dev"
-                  appearance="hypertext"
-                  >lit</fluent-anchor
-                >
-              </li>
-
-              <li>
-                <fluent-anchor
-                  href="https://docs.microsoft.com/en-us/fluent-ui/web-components/"
-                  appearance="hypertext"
-                  >Fluent Web Components</fluent-anchor
-                >
-              </li>
-
-              <li>
-                <fluent-anchor
-                  href="https://vaadin.github.io/vaadin-router/vaadin-router/demo/#vaadin-router-getting-started-demos"
-                  appearance="hypertext"
-                  >Vaadin Router</fluent-anchor
-                >
-              </li>
-            </ul>
-          </fluent-card>
-
-          <fluent-anchor href="/about" appearance="accent">Navigate to About</fluent-anchor>
         </div>
 
         <pwa-install>Install PWA Starter</pwa-install>
